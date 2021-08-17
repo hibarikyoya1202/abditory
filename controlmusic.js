@@ -236,7 +236,7 @@ $(function () {
 
     playPreviousTrackButton.on('click', function () { selectTrack(-1); });
     playNextTrackButton.on('click', function () { selectTrack(1); });
-    audio.volume = 0.01;
+    audio.volume = 0.4;
     setTimeout(function() {
       $('#play-pause-button').click();
     }, 1000);
