@@ -219,9 +219,8 @@ $(function () {
 
   function initPlayer() {
     audio = new Audio();
-
+        
     selectTrack(0);
-
     audio.loop = false;
 
     playPauseButton.on('click', playPause);
@@ -237,9 +236,7 @@ $(function () {
     playPreviousTrackButton.on('click', function () { selectTrack(-1); });
     playNextTrackButton.on('click', function () { selectTrack(1); });
     audio.volume = 0.4;
-    setTimeout(function() {
-      $('#play-pause-button').click();
-    }, 1000);
+
   }
 
   initPlayer();
