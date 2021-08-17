@@ -1,0 +1,204 @@
+body {
+	background: #EEE9D9;
+	font-family: "Amatic SC";
+  padding: 0 !important;
+  margin:0 !important;
+}
+
+.header{
+    background-color: #E8E0CA;
+    box-shadow: 0 0 8px #E3C593;
+    padding: 20px 20px;
+    overflow:hidden;
+}
+
+.flex{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  margin: 0 auto; /* Center the DIV horizontally */
+}
+
+.header-left{
+  min-height:75px;
+  float:left;
+}
+.header-right {
+  min-height:75px;
+  float: right;
+}
+
+.header-right a{
+  display:inline-block;
+  text-decoration: none;
+  padding: 7px 25px;
+  color: #fff;
+  font-size:30px;
+    
+  text-shadow: 0px 2px 5px rgba(0,0,0,0.1),
+                 2px 2px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
+}
+
+.header-right a:hover span{
+  color: #EBBE89;
+}
+
+.header-right a:hover{
+  -webkit-animation: breathing 1s ease-out infinite normal;
+  animation: breathing 1s ease-out infinite normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.logo{
+  position: relative;
+  height:69px;
+  width:69px;
+  cursor:grab;
+  -webkit-animation: breathing 4s ease-out infinite normal;
+  animation: breathing 4s ease-out infinite normal;
+  -webkit-font-smoothing: antialiased;
+
+}
+
+.logo img{
+  height:69px;
+  width:69px;
+  transition: transform 1s ease-in;
+}
+
+.logo:hover img{
+  transform: scale(1.25);
+}
+
+
+.header .title a:hover{
+    font-weight: 800;
+    color: #B3ACA5;
+}
+.main {
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+}
+
+.main:after {
+   content : "";
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: url(background.jpg) no-repeat center center;
+   background-size: cover;
+   width: 100%;
+   height: 100%;
+   opacity : 0.2;
+   z-index: -1;
+}
+
+
+.text_story{
+    animation-name: example;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background-color: #FEFCF4;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.story {
+    height: calc(100vh - 330px);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+ } 
+
+ .story span{
+    font-size:50px;
+    color: #A88453;
+    display: block !important;
+ }
+
+
+ @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in-up {
+    -webkit-animation: fadeInUp 0.5s;
+    animation: fadeInUp 2s;
+  }
+
+
+
+@-webkit-keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+
+
+.dot{
+  width:10px;
+  height:10px;
+  left:-20px;
+  top:0;
+  position:absolute;
+  background: url(petal.svg);
+  z-index:999;
+  background-size: 100% 100%;
+}
