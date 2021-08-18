@@ -252,7 +252,11 @@ body {
   #player-track{
     left:15% !important;
     right:15% !important;
-    padding: 0px 10px 20px 30% !important;
+    padding: 0px 10px 21px 30% !important;
+  }
+
+  .story {
+    top:45% !important;
   }
 
   .button{
