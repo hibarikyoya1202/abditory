@@ -108,14 +108,18 @@ body {
 }
 
 .story {
-    height: calc(100vh - 330px);
+    position: absolute;
+    width:100%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
     display:flex;
     justify-content: center;
     align-items: center;
  } 
 
  .story span{
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #A88453;
     text-align: center;
  }
@@ -232,35 +236,40 @@ body {
     font-size:1.5rem;
   }
 
-
-  .story{
-    height: calc(100vh - 370px) !important;
-  }
   .text_story{
     padding: 15px;
   }
 
   #app-cover{
-    left:20px !important;
-    right:20px !important;
+    left:10% !important;
+    right:10% !important;
   }
 
-  .wrapperPlayer{
-    bottom:100px !important;
+  #player-controls{
+    width: 220px !important;
   }
+
   #player-track{
-    left:35px !important;
-    right:35px !important;
-    padding: 33px 42px 30px 204px;
+    left:15% !important;
+    right:15% !important;
+    padding: 0px 10px 20px 30% !important;
   }
 
   .button{
-    width:13px !important;
-    height:13px !important;
+    width:10px !important;
+    height:10px !important;
     padding:16px !important;
   }
+  .button i{
+    font-size: 13px !important;
+  }
 
+  #album-art{
+    width:100px !important;
+    height:100px !important;
+  }
   .control{
+    width:30% !important;
     padding:25px 0 !important ;
   }
 
@@ -278,5 +287,6 @@ body {
   .author{
     text-align: center !important;
   }
+
   
 }
