@@ -6,6 +6,8 @@ var quote = $('#quote')
 var authorDiv = $('.author-text')
 var currentAuthor
 
+var text_story = $('.text_story')
+
 
 
 authorDiv.on('click', function (event) {
@@ -30,6 +32,10 @@ function callbackAfterGetQuote(data) {
     setQuote(defaultQuote)
     setAuthor(data.defaultAuthor)
   }
+
+
+
+  text_story[0].style.display = 'block'
 }
 
 
