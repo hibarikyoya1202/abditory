@@ -35,7 +35,7 @@ body {
   text-decoration: none;
   padding: 7px 25px;
   color: #fff;
-  font-size:30px;
+  font-size: 2rem;
     
   text-shadow: 0px 2px 5px rgba(0,0,0,0.1),
                  2px 2px 5px rgba(0,0,0,0.05),
@@ -54,8 +54,6 @@ body {
 
 .logo{
   position: relative;
-  height:69px;
-  width:69px;
   cursor:grab;
   -webkit-animation: breathing 4s ease-out infinite normal;
   animation: breathing 4s ease-out infinite normal;
@@ -117,7 +115,7 @@ body {
  } 
 
  .story span{
-    font-size:50px;
+    font-size: 2rem;
     color: #A88453;
     display: block !important;
  }
@@ -201,4 +199,58 @@ body {
   background: url(petal.svg);
   z-index:999;
   background-size: 100% 100%;
+}
+
+
+@media screen and (max-width:980px) {
+  .header {
+    font-size:1.5rem;
+  }
+
+  .header-left, .header-right{
+    min-height:50px;
+  }
+  
+
+  .logo img{
+    height:49px;
+    width:49px;
+  }
+
+  .header-right a{
+    font-size:1.5rem;
+  }
+
+
+  .text_story{
+    padding: 15px;
+  }
+
+  #app-cover{
+    left:20px !important;
+    right:20px !important;
+  }
+
+  #player-track{
+    left:35px !important;
+    right:35px !important;
+    padding: 33px 42px 30px 204px;
+  }
+
+  .button{
+    width:13px !important;
+    height:13px !important;
+    padding:16px !important;
+  }
+
+  .control{
+    padding:25px 0 !important ;
+  }
+
+  small{
+    font-size:0.75rem !important;
+  }
+  .text_story span{
+    font-size:1.25rem;
+  }
 }
