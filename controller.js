@@ -3,7 +3,7 @@ const defaultQuote = '"“People where you live," the little prince said, "grow 
 const defaultAuthor = "- Little Prince （Antoine de Saint-Exupéry) -"
 const googleAPI = "https://www.google.com/search?q="
 var quote = $('#quote')
-var authorDiv = $('.author-text')
+var authorDiv = $('#author .author-text')
 var currentAuthor
 
 var text_story = $('.text_story')
@@ -57,5 +57,5 @@ function setAuthor(author) {
 
 
 function openWindown(url) {
-  window.open(url,"_self")
+  window.open(url,"_blank")
 }
