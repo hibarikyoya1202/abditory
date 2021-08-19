@@ -235,9 +235,13 @@ body {
   }
 
   #player-track{
-    left:15% !important;
-    right:15% !important;
-    padding: 0px 10px 21px 30% !important;
+    left:17% !important;
+    right:17% !important;
+    padding: 0px 10px 10px 25% !important;
+  }
+
+  #player-track.active{
+    top:-80px !important;
   }
 
   .story {
@@ -273,6 +277,10 @@ body {
 
   .story .quote{
     font-size:2rem !important;
+  }
+
+  .wrapperPlayer{
+    bottom: 10px !important;
   }
   
 }
