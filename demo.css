@@ -30,12 +30,6 @@ body {
   float: right;
 }
 
-.header-right a:hover{
-  -webkit-animation: breathing 1s ease-out infinite normal;
-  animation: breathing 1s ease-out infinite normal;
-  -webkit-font-smoothing: antialiased;
-}
-
 .logo{
   position: relative;
   cursor:grab;
@@ -321,6 +315,11 @@ body {
   margin-left: 25px;
 }
 
+.another-quote .btn:hover{
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+  animation-iteration-count: infinite;
+}
 
 .css-typing{
   transition: all 1s ease-in;
