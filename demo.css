@@ -81,6 +81,10 @@ body {
 }
 
 
+.text_story .text{
+  transition: all 0.25s ease-in;
+}
+
 .text_story{
     animation-name: example;
     animation-duration: 4s;
@@ -315,4 +319,9 @@ body {
 
 .another-quote{
   margin-left: 25px;
+}
+
+
+.css-typing{
+  transition: all 1s ease-in;
 }

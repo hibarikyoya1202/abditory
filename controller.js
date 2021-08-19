@@ -4,6 +4,7 @@ const defaultAuthor = "- Little Prince （Antoine de Saint-Exupéry) -"
 const googleAPI = "https://www.google.com/search?q="
 var quote = $('#quote')
 var authorDiv = $('#author .author-text')
+var anotherQuoteBtn = $('.another-quote a')
 var currentAuthor
 
 var text_story = $('.text_story')
@@ -11,51 +12,97 @@ var text_story = $('.text_story')
 
 
 authorDiv.on('click', function (event) {
-  url = googleAPI + currentAuthor;
-  openWindown(url)
+	url = googleAPI + currentAuthor;
+	openWindown(url)
 })
 
-$.get(
-	quoteAPI,
-  {minLength: 50},
-	callbackAfterGetQuote
-);
+
+
+function getQuote(callback) {
+  params = {minLength: 50}
+  if (window.innerWidth <= 768) {
+    params = {
+      maxLength: 100
+    }
+  }
+	$.get(
+		quoteAPI,
+		params,
+		callback
+	);
+}
+
+function typeEffect(string, classAffect, timeout = 0) {
+	var spans = '<span>' + string.split('').join('</span><span>') + '</span>';  
+  setTimeout(function () {
+    $('.css-typing')[0].style.opacity = 1;
+    $(classAffect)[0].innerText = ''
+    $(spans).hide().appendTo(classAffect).each(function (i) {
+      $(this).delay(50 * i).css({
+        display: 'inline',
+        opacity: 0
+      }).animate({
+        opacity: 1
+      }, 100);
+    });
+  }, timeout)
+
+}
 
 
 
 function callbackAfterGetQuote(data) {
-  console.log(data)
 	if (data.content) {
 		setInfo(data.content)
-    setAuthor(data.author)
+		setAuthor(data.author)
 	} else {
-    setQuote(defaultQuote)
-    setAuthor(data.defaultAuthor)
-  }
+		setQuote(defaultQuote)
+		setAuthor(defaultAuthor)
+	}
 
-
-
-  text_story[0].style.display = 'block'
+		text_story[0].style.display = 'block'
 }
 
 
+anotherQuoteBtn.on('click', function (e) {
+	getQuote(function (data) {
+    $('.css-typing')[0].style.opacity = 0;
+    if (data.content) {
+      setQuote(data.content, data.author, 1000)
+    } else {
+      setQuote(defaultQuote, defaultAuthor, 1000)
+    }
+  })
+})
+
+
+function setQuote(content, author, timeout = 0) {
+  let authorText = '- ' + author + ' -'
+  currentAuthor = author
+  typeEffect(content, '.css-typing', timeout)
+  typeEffect(authorText,'#author .author-text', timeout)
+}
 
 function setInfo(content) {
-  quote[0].innerHTML = content
-  
+	typeEffect(content, '.css-typing')
 }
 
 
 function setAuthor(author) {
-  let authorText = '- ' + author + ' -'
-  currentAuthor = author
-  console.log(authorText);
-  console.log(author)
-  authorDiv[0].innerText = authorText
+	let authorText = '- ' + author + ' -'
+	currentAuthor = author
+  typeEffect(authorText,'#author .author-text')
+	
 }
 
 
 
 function openWindown(url) {
-  window.open(url,"_blank")
+	window.open(url,"_blank")
 }
+
+function init() {
+	getQuote(callbackAfterGetQuote);
+}
+
+init()
