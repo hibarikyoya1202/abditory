@@ -74,6 +74,15 @@ function typeEffect(string, classAffect, timeout = 0) {
 
 }
 
+$('.bulk-toggle').on('click', function (e) {
+	value = $(e.currentTarget).is(":checked")
+	if (value) {
+		$('#main').addClass('dark-theme')
+	} else {
+		$('#main').removeClass('dark-theme')
+	}
+})
+
 function getAuthorImg(author) {
   getImg(author, function (data) {
     setAuthorImg(data)

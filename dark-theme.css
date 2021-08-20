@@ -1,0 +1,159 @@
+.dark-theme.main:after{
+  filter:invert(1);
+}
+.dark-theme .header{
+  background-color: #a6a6a6;
+  --box-shadow-color: #B1A8BB;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+}
+
+.dark-theme .hand-draw-context{
+  border-color: #c4a376;
+  background:#000;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+}
+
+.dark-theme .hand-draw-btn{
+  --box-shadow-color: #CBBEB9;
+  color: #88674B;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+}
+
+.dark-theme .text_story{
+  background-color: #2b2b2b;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+}
+
+.dark-theme .story .quote{
+  color: #6D6071;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+}
+
+
+.dark-theme #app-cover{
+  background-color: #000;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+}
+
+
+.dark-theme .button{
+  background-color: #000;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+}
+
+.dark-theme .button i{
+  color: #E7E5E9;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+
+}
+
+.dark-theme .button:hover {
+  color: #E7E5E9;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+}
+
+.dark-theme .button:hover i{
+  color: #000;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+}
+
+.dark-theme #player-track{
+  background-color: #FDFDFE;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+}
+
+.dark-theme #album-name{
+  color: #786E87;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+}
+.dark-theme #track-name{
+  color: #BEAFAE;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+}
+
+.dark-theme #album-art{
+  box-shadow: 0 0 0 10px #000;
+}
+
+.dark-theme #album-art.active {
+  box-shadow: 0 0 0 4px #000, 0 30px 50px -15px #E1B997;
+}
+
+.dark-theme #s-area{
+  background-color: #D7D6E1;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+}
+
+.dark-theme #track-time.active #current-time, #track-time.active #track-length{
+  color: #6D6071;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+}
+
+
+.dark-theme .logo{
+  filter: invert(1);
+}
+
+.dark-theme .dot{
+  filter: invert(1);
+}
