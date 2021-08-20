@@ -1,9 +1,16 @@
-.dark-theme.main:after{
-  filter:invert(1);
+.dark-theme .main:after{
+  background: url(dark-mode-bg.jpg) no-repeat center center;
+  background-size: cover;
+  opacity: 0.5;
 }
+
+body.dark-theme{
+  background: #002025;
+}
+
 .dark-theme .header{
-  background-color: #a6a6a6;
-  --box-shadow-color: #B1A8BB;
+  background-color: #002025;
+  --box-shadow-color: #010c0e;
   -webkit-transition: background-color 500ms linear, color 1s linear;
   -moz-transition: background-color 500ms linear, color 1s linear;
   -o-transition: background-color 500ms linear, color 1s linear;
@@ -12,18 +19,22 @@
 }
 
 .dark-theme .hand-draw-context{
-  border-color: #c4a376;
-  background:#000;
+  border-color: #e7e9c9;
+  background:rgb(57, 146, 161);
   -webkit-transition: background-color 500ms linear, color 1s linear;
   -moz-transition: background-color 500ms linear, color 1s linear;
   -o-transition: background-color 500ms linear, color 1s linear;
   -ms-transition: background-color 500ms linear, color 1s linear;
-  transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear, border 500ms ease-out;
+}
+
+.dark-theme .hand-draw-btn:hover{
+  box-shadow: 0 2px 0 #132b36, 0 2px 0px 2px #0e5680;
 }
 
 .dark-theme .hand-draw-btn{
-  --box-shadow-color: #CBBEB9;
-  color: #88674B;
+  --box-shadow-color: #0488a0;
+  color: #fff;
   -webkit-transition: background-color 500ms linear, color 1s linear;
   -moz-transition: background-color 500ms linear, color 1s linear;
   -o-transition: background-color 500ms linear, color 1s linear;
@@ -32,7 +43,7 @@
 }
 
 .dark-theme .text_story{
-  background-color: #2b2b2b;
+  background-color: #002329;
   -webkit-transition: background-color 500ms linear, color 1s linear;
   -moz-transition: background-color 500ms linear, color 1s linear;
   -o-transition: background-color 500ms linear, color 1s linear;
@@ -41,7 +52,7 @@
 }
 
 .dark-theme .story .quote{
-  color: #6D6071;
+  color: #e7e9c9;
   -webkit-transition: background-color 500ms linear, color 1s linear;
   -moz-transition: background-color 500ms linear, color 1s linear;
   -o-transition: background-color 500ms linear, color 1s linear;
@@ -51,7 +62,7 @@
 
 
 .dark-theme #app-cover{
-  background-color: #000;
+  background-color: #00171b;
   -webkit-transition: background-color 500ms linear, color 1s linear;
   -moz-transition: background-color 500ms linear, color 1s linear;
   -o-transition: background-color 500ms linear, color 1s linear;
@@ -61,7 +72,7 @@
 
 
 .dark-theme .button{
-  background-color: #000;
+  background-color: #00171b;
   -webkit-transition: background-color 500ms linear, color 1s linear;
   -moz-transition: background-color 500ms linear, color 1s linear;
   -o-transition: background-color 500ms linear, color 1s linear;
@@ -70,7 +81,7 @@
 }
 
 .dark-theme .button i{
-  color: #E7E5E9;
+  color: #0488a0;
   -webkit-transition: background-color 500ms linear, color 1s linear;
   -moz-transition: background-color 500ms linear, color 1s linear;
   -o-transition: background-color 500ms linear, color 1s linear;
@@ -80,7 +91,8 @@
 }
 
 .dark-theme .button:hover {
-  color: #E7E5E9;
+  color: #71d6e6;
+  background-color:#0488a0;
   -webkit-transition: background-color 500ms linear, color 1s linear;
   -moz-transition: background-color 500ms linear, color 1s linear;
   -o-transition: background-color 500ms linear, color 1s linear;
@@ -89,7 +101,7 @@
 }
 
 .dark-theme .button:hover i{
-  color: #000;
+  color: #002c33;
   -webkit-transition: background-color 500ms linear, color 1s linear;
   -moz-transition: background-color 500ms linear, color 1s linear;
   -o-transition: background-color 500ms linear, color 1s linear;
@@ -98,7 +110,7 @@
 }
 
 .dark-theme #player-track{
-  background-color: #FDFDFE;
+  background-color: #002c33;
   -webkit-transition: background-color 500ms linear, color 1s linear;
   -moz-transition: background-color 500ms linear, color 1s linear;
   -o-transition: background-color 500ms linear, color 1s linear;
@@ -107,7 +119,7 @@
 }
 
 .dark-theme #album-name{
-  color: #786E87;
+  color: #d0d3a7;
   -webkit-transition: background-color 500ms linear, color 1s linear;
   -moz-transition: background-color 500ms linear, color 1s linear;
   -o-transition: background-color 500ms linear, color 1s linear;
@@ -127,12 +139,29 @@
   box-shadow: 0 0 0 10px #000;
 }
 
+.dark-theme #album-art img.active{
+  filter: hue-rotate(180deg);
+  -webkit-filter: hue-rotate(180deg);
+}
+#album-art.buffering img.active{
+  filter: blur(2px) hue-rotate(180deg) !important;
+  -webkit-filter: blur(2px) hue-rotate(180deg) !important;
+}
 .dark-theme #album-art.active {
-  box-shadow: 0 0 0 4px #000, 0 30px 50px -15px #E1B997;
+  box-shadow: 0 0 0 4px #000, 0 30px 50px -15px #000000;
+}
+
+.dark-theme #seek-bar{
+  background-color: #d0d1c0;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
 }
 
 .dark-theme #s-area{
-  background-color: #D7D6E1;
+  background-color: #198899;
   -webkit-transition: background-color 500ms linear, color 1s linear;
   -moz-transition: background-color 500ms linear, color 1s linear;
   -o-transition: background-color 500ms linear, color 1s linear;
@@ -140,20 +169,58 @@
   transition: background-color 500ms linear, color 1s linear;
 }
 
-.dark-theme #track-time.active #current-time, #track-time.active #track-length{
-  color: #6D6071;
+.dark-theme #track-time.active #current-time, .dark-theme #track-time.active #track-length{
+  color: #2ec0d6;
   -webkit-transition: background-color 500ms linear, color 1s linear;
   -moz-transition: background-color 500ms linear, color 1s linear;
   -o-transition: background-color 500ms linear, color 1s linear;
   -ms-transition: background-color 500ms linear, color 1s linear;
   transition: background-color 500ms linear, color 1s linear;
-}
-
-
-.dark-theme .logo{
-  filter: invert(1);
 }
 
 .dark-theme .dot{
   filter: invert(1);
+}
+
+
+.dark-theme .author-img{
+  box-shadow: -5px 5px 15px #000000;
+}
+
+.dark-theme .author-img .info{
+  background-color: #00353d;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+}
+
+.dark-theme .author-img .info .seemore{
+  color:#2db0c4;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+}
+
+.dark-theme .author-img .info .des{
+  background-color: #00353d;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
+}
+
+
+.dark-theme .author-img .info p{
+  background:#00353d;
+  color: #adad9d;
+  -webkit-transition: background-color 500ms linear, color 1s linear;
+  -moz-transition: background-color 500ms linear, color 1s linear;
+  -o-transition: background-color 500ms linear, color 1s linear;
+  -ms-transition: background-color 500ms linear, color 1s linear;
+  transition: background-color 500ms linear, color 1s linear;
 }

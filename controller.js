@@ -74,12 +74,17 @@ function typeEffect(string, classAffect, timeout = 0) {
 
 }
 
+function changeLogoImg(fileName) {
+	$('#logo .logo img')[0].src = fileName
+}
 $('.bulk-toggle').on('click', function (e) {
 	value = $(e.currentTarget).is(":checked")
 	if (value) {
-		$('#main').addClass('dark-theme')
+		$('body').addClass('dark-theme')
+		changeLogoImg('logo-dark-mode.svg')
 	} else {
-		$('#main').removeClass('dark-theme')
+		$('body').removeClass('dark-theme')
+		changeLogoImg('logo.svg')
 	}
 })
 
