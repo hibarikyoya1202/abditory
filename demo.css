@@ -327,11 +327,11 @@ body {
   background-image: url("hdb.png");
 }
 
-.another-quote{
+.another-quote, .another-word{
   margin-left: 25px;
 }
 
-.another-quote .btn:hover{
+.another-quote .btn:hover, .another-word .btn:hover{
   animation: pulse; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 3s; /* don't forget to set a duration! */
   animation-iteration-count: infinite;
@@ -484,3 +484,17 @@ body {
 	outline: 0;
 }
 
+
+
+
+.wrapper-loading{
+  position: fixed;
+  display: none;
+  top:0;
+  bottom: 0;
+  left:0;
+  right:0;
+  background-color: #2d1c1c;
+  opacity: 0.5;
+  z-index: 998;
+}

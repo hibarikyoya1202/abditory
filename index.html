@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="demo.css">
 	<link rel="stylesheet" href="dark-theme.css">
 	<link rel="stylesheet" href="music.css">
+	<link rel="stylesheet" href="animation.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Amatic+SC" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,6 +51,11 @@
 					</div>
 				</div>
 				<div class="header-right flex">
+					<div class="another-word">
+						<a href="#" class="hand-draw-btn btn">
+							<span class="hand-draw-context">Another Words ?</span>
+						</a>
+					</div>
 					<div class="another-quote">
 						<a href="#" class="hand-draw-btn btn">
 							<span class="hand-draw-context">Another Quote ?</span>
@@ -65,6 +71,7 @@
 			<div class="text_story fade-in-up " style="display:none">
 				<div class="text">
 					<div>
+						<span id="word" class="quote css-typing" style="display:block"></span>
 						<span id="quote" class="quote css-typing">
 						</span>
 					</div>
@@ -134,6 +141,8 @@
 		</div>
 
 	</div>
+	<div class="wrapper-loading"></div>
+	<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 </body>
 <script type="text/javascript" src="controlmusic.js"></script>
 <script type="text/javascript" src="petal.js"></script>
