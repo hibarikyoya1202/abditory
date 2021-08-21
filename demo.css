@@ -115,76 +115,6 @@ body {
   padding: 10px;
 }
 
-
- @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .fade-in-up {
-    -webkit-animation: fadeInUp 0.5s;
-    animation: fadeInUp 2s;
-  }
-
-
-
-@-webkit-keyframes breathing {
-  0% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-
-  25% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-
-  60% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-
-  100% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-}
-
-@keyframes breathing {
-  0% {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-
-  25% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-
-  60% {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-
-  100% {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-}
-
-
-
 .dot{
   width:10px;
   height:10px;
@@ -205,6 +135,11 @@ body {
 }
 
 @media screen and (max-width:800px) {
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .header {
     font-size:1.5rem;
   }
@@ -288,6 +223,10 @@ body {
   .author-img{
     display:none !important;
   }
+
+  .defination-text{
+    min-width:80vw !important;
+  }
   
 }
 .story .text{
@@ -325,6 +264,7 @@ body {
   --box-shadow-color: #cebfab;
   transition: padding 0.1s, box-shadow 0.1s, top 0.1s;
   background-image: url("hdb.png");
+  background-color: #FFF;
 }
 
 .another-quote, .another-word{
@@ -494,7 +434,18 @@ body {
   bottom: 0;
   left:0;
   right:0;
-  background-color: #2d1c1c;
-  opacity: 0.5;
+  background-color: rgb(233, 221, 207);
+  opacity: 0.7;
   z-index: 998;
+  cursor: wait;
+}
+
+.defination-text{
+  margin-top:20px;
+  font-family: 'Roboto';
+  color: #99a175;
+  font-size: 1.2rem !important;
+  min-width: 25vw;
+  max-width: 50vw;
+  display: block;
 }
