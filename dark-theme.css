@@ -35,6 +35,7 @@ body.dark-theme{
 .dark-theme .hand-draw-btn{
   --box-shadow-color: #0488a0;
   color: #fff;
+  background-color: rgb(57, 146, 161);
   -webkit-transition: background-color 500ms linear, color 1s linear;
   -moz-transition: background-color 500ms linear, color 1s linear;
   -o-transition: background-color 500ms linear, color 1s linear;
@@ -223,4 +224,17 @@ body.dark-theme{
   -o-transition: background-color 500ms linear, color 1s linear;
   -ms-transition: background-color 500ms linear, color 1s linear;
   transition: background-color 500ms linear, color 1s linear;
+}
+
+
+.dark-theme .wrapper-loading{
+  background-color: #00151b;
+}
+
+.dark-theme .lds-ellipsis div{
+  background:#fff !important;
+}
+
+.dark-theme .defination-text{
+  color: #99a175 !important;
 }

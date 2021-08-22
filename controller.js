@@ -80,8 +80,9 @@ function getQuote(callback) {
 
 function typeEffect(string, classAffect, timeout = 0) {
 	var spans = '<span>' + string.split('').join('</span><span>') + '</span>'; 
+		$(classAffect)[0].style.opacity = 0;
 		setTimeout(function () {
-			$('.css-typing')[0].style.opacity = 1;
+			$(classAffect)[0].style.opacity = 1;
 			$(classAffect)[0].innerText = ''
 			$(spans).hide().appendTo(classAffect).each(function (i) {
 				$(this).delay(50 * i).css({
@@ -157,8 +158,7 @@ anotherQuoteBtn.on('click', function (e) {
 	getQuote(function (data) {
 		$('#author')[0].style.pointerEvents = 'none'
 		$('#author-img')[0].style.display = ''
-		getAuthorImg(data.author)
-		$('.css-typing')[0].style.opacity = 0;
+		getAuthorImg(data.author)		
 		if (data.content) {
 			setQuote(data.content, data.author, 1000)
 		} else {
@@ -183,8 +183,9 @@ function callDefinationAPI(data) {
 
 
 function setWordAndDefination(word, definition) {
-	$('.css-typing')[0].style.opacity = 0;
 	$('#author-img')[0].style.display = 'none'
+	$('#word.css-typing')[0].style.display= 'block'
+	$('#quote').addClass('defination-text')
 	typeEffect(word, '#word.css-typing', 1000)
 	typeEffect(definition, '#quote.css-typing', 1000)
 	typeEffect('Click To See More','#author .author-text', 1000)
@@ -193,13 +194,22 @@ function setWordAndDefination(word, definition) {
 
 anotherWordsBtn.on('click', function (e) {
 	setLoading(true)
-	getWord(callDefinationAPI)
+	if (window.innerWidth <= 768) {
+		getWord(function (data) {
+			setWordAndDefination(data[0].word, data[0].definition)
+			setLoading(false)
+		})
+	} else {
+		getWord(callDefinationAPI)
+	}
 })
 
 
 function setQuote(content, author, timeout = 0) {
 	let authorText = '- ' + author + ' -'
 	currentSearch = author
+	$('#word.css-typing')[0].style.display= 'none'
+	$('#quote').removeClass('defination-text')
 	typeEffect(content, '#quote.css-typing', timeout)
 	typeEffect(authorText,'#author .author-text', timeout)
 }
@@ -209,10 +219,10 @@ function setQuote(content, author, timeout = 0) {
 function setLoading(val) {
 	if (val) {
 		$('.wrapper-loading')[0].style.display = 'block'
-		$('.lds-ellipsis')[0].style.display = 'block'
+		$('.lds-heart')[0].style.display = 'block'
 	} else {
 		$('.wrapper-loading')[0].style.display = 'none'
-		$('.lds-ellipsis')[0].style.display = 'none'
+		$('.lds-heart')[0].style.display = 'none'
 	}
 }
 function openWindown(url) {
