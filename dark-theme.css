@@ -1,11 +1,11 @@
 .dark-theme .main:after{
   background: url(dark-mode-bg.jpg) no-repeat center center;
   background-size: cover;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 body.dark-theme{
-  background: #002025;
+  background: #002c33;
 }
 
 .dark-theme .header{
