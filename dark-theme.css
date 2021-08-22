@@ -4,6 +4,14 @@
   opacity: 0.35;
 }
 
+@media screen and (max-width:800px) {
+	.dark-theme .main:after{
+    background: url(mobile-bg-dark-mode.jpg) no-repeat center center;
+    background-size: cover;
+    opacity: 0.5;
+	}
+}
+
 body.dark-theme{
   background: #002c33;
 }
