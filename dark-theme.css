@@ -246,3 +246,22 @@ body.dark-theme{
 .dark-theme .defination-text{
   color: #99a175 !important;
 }
+
+.dark-theme .footer{
+  font-family: 'Roboto';
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: rgb(2, 27, 31);
+  height:50px;
+  text-align: center;
+}
+.dark-theme .footer-creator{
+  color: #6eb4b9;
+  font-style: italic;
+  }
+.dark-theme .footer-email{
+    color: #78d0d3;
+    font-style: italic;
+    }
