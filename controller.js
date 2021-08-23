@@ -3,7 +3,7 @@ const defaultQuote = '"“People where you live," the little prince said, "grow 
 const defaultAuthor = "- Little Prince （Antoine de Saint-Exupéry) -"
 const googleAPI = "https://www.google.com/search?q="
 const wikiAPI = "https://en.wikipedia.org/w/api.php"
-const randomWordAPI = "https://random-words-api.vercel.app/word"
+const randomWordAPI = "https://san-random-words.vercel.app/"
 const dictionaryAPI = "https://api.dictionaryapi.dev/api/v2/entries/en/{0}"
 
 var quote = $('#quote')
