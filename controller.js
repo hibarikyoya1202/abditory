@@ -3,7 +3,7 @@ const defaultQuote = '"“People where you live," the little prince said, "grow 
 const defaultAuthor = "- Little Prince （Antoine de Saint-Exupéry) -"
 const googleAPI = "https://www.google.com/search?q="
 const wikiAPI = "https://en.wikipedia.org/w/api.php"
-const randomWordAPI = "https://san-random-words.vercel.app/"
+const randomWordAPI = "https://random-word-api.herokuapp.com/word"
 const dictionaryAPI = "https://api.dictionaryapi.dev/api/v2/entries/en/{0}"
 
 var quote = $('#quote')
@@ -19,7 +19,7 @@ function getWord(callback) {
 	$.ajax({
 		type: "GET",
 		url: randomWordAPI,
-			dataType: 'json',
+		dataType: 'json',
 		success: callback
 	});
 }
@@ -158,7 +158,7 @@ anotherQuoteBtn.on('click', function (e) {
 	getQuote(function (data) {
 		$('#author')[0].style.pointerEvents = 'none'
 		$('#author-img')[0].style.display = ''
-		getAuthorImg(data.author)		
+		getAuthorImg(data.author) 
 		if (data.content) {
 			setQuote(data.content, data.author, 1000)
 		} else {
@@ -171,7 +171,7 @@ anotherQuoteBtn.on('click', function (e) {
 
 
 function callDefinationAPI(data) {
-	getDefination(data[0].word, function(result) {
+	getDefination(data[0], function(result) {
 		setWordAndDefination(result[0].word, result[0].meanings[0].definitions[0].definition)
 		setLoading(false)
 	}, function (err) {
@@ -194,14 +194,7 @@ function setWordAndDefination(word, definition) {
 
 anotherWordsBtn.on('click', function (e) {
 	setLoading(true)
-	if (window.innerWidth <= 768) {
-		getWord(function (data) {
-			setWordAndDefination(data[0].word, data[0].definition)
-			setLoading(false)
-		})
-	} else {
-		getWord(callDefinationAPI)
-	}
+	getWord(callDefinationAPI)
 })
 
 
@@ -230,38 +223,38 @@ function openWindown(url) {
 }
 
 function checkCookie() {
-  let lightTheme = getCookie("light-theme");
-  if (lightTheme == 'on') {
-		setTheme(true)
-		$('.bulk-toggle').attr("checked", true);
-  } else {
-		setTheme(false)
-		$('.bulk-toggle').attr("checked", false);
-  }
+	let lightTheme = getCookie("light-theme");
+	if (lightTheme == 'on') {
+	setTheme(true)
+	$('.bulk-toggle').attr("checked", true);
+	} else {
+	setTheme(false)
+	$('.bulk-toggle').attr("checked", false);
+	}
 }
 
 
 function setCookie(cname,cvalue,exdays) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  let expires = "expires=" + d.toGMTString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	const d = new Date();
+	d.setTime(d.getTime() + (exdays*24*60*60*1000));
+	let expires = "expires=" + d.toGMTString();
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
 function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
+	let name = cname + "=";
+	let decodedCookie = decodeURIComponent(document.cookie);
+	let ca = decodedCookie.split(';');
+	for(let i = 0; i < ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
 }
 
 function init() {
