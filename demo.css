@@ -1,12 +1,12 @@
 body {
-	background: #EEE9D9;
+	background: #fdf5d5;
 	font-family: "Amatic SC";
   padding: 0 !important;
   margin:0 !important;
 }
 
 .header{
-    background-color: #ffe7dc;
+    background-color: #fff0dc;
     --box-shadow-color: #cfb6b6;
     box-shadow: 0 0 8px var(--box-shadow-color);
     padding: 20px 20px;
@@ -96,7 +96,7 @@ body {
     width:100%;
     top:50%;
     left:50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -70%);
     display:flex;
     justify-content: center;
     align-items: center;
@@ -457,11 +457,20 @@ body {
 
 .footer{
   font-family: 'Roboto';
+  font-size: small;
   position: absolute;
   bottom:0;
   left:0;
   right:0;
-  background-color: #fff;
-  height:50px;
+  background-color: #ffefdc;
+  height:30px;
   text-align: center;
 }
+.footer-creator{
+color: #daa68e;
+font-style: italic;
+}
+.footer-email{
+  color: #9b664e;
+  font-style: italic;
+  }
