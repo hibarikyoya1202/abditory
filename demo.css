@@ -217,7 +217,7 @@ body {
   }
 
   .wrapperPlayer{
-    bottom: 10px !important;
+    bottom: 75px !important;
   }
 
   .author-img{
@@ -448,4 +448,17 @@ body {
   min-width: 25vw;
   max-width: 50vw;
   display: block;
+}
+
+
+
+.footer{
+  font-family: 'Roboto';
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: #fff;
+  height:50px;
+  text-align: center;
 }
